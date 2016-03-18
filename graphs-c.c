@@ -145,7 +145,8 @@ void recommendationsFor(int source)
 
 	if(count_source == 0)
 	{
-		printf("No recommendations. Get a few friends for recommendations.\n");
+		printf("No recommendations for %d. Get a few friends for recommendations.\n",source);
+		return;
 	}
 
 	char* result = (char*)malloc(MAX_SIZE_RECO*NUM_OF_NODES);
@@ -219,6 +220,7 @@ int main(int argc, char const *argv[])
 	printNeighbours(4);
 	
 	recommendationsFor(1);
+	recommendationsFor(4);
 
 	return 0;
 }
